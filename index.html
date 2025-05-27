@@ -5,113 +5,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bienvenido/a a tu programa</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
-      background-color: #f8f8f8;
-      color: #333;
-    }
-    header, section {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
+      background-color: #ffffff;
+      color: #000000;
     }
     header {
-      background-color: #003366;
-      color: #fff;
-      padding: 30px 20px;
+      background: linear-gradient(to right, #ff6600, #ff9900);
+      color: white;
+      padding: 40px 20px;
       text-align: center;
+      position: relative;
     }
-    h1, h2 {
-      color: #003366;
+    header img {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 60px;
     }
-    .faq {
-      margin-top: 10px;
+    .video-container {
+      text-align: center;
+      margin: 20px auto;
+    }
+    .video-container iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 315px;
+      border: none;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      gap: 20px;
+    }
+    .column {
+      flex: 1 1 45%;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #ff6600;
+    }
+    ul {
+      padding-left: 20px;
     }
     .faq summary {
       cursor: pointer;
       font-weight: bold;
+      margin-top: 10px;
+    }
+    .faq details {
+      margin-bottom: 10px;
     }
     .contact-button {
       display: inline-block;
-      background-color: #0066cc;
+      background-color: #ff6600;
       color: white;
       padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
+      margin: 10px 0;
+    }
+    a {
+      color: #ff6600;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="https://via.placeholder.com/60x60.png?text=A" alt="Logo universitario">
     <h1>¡Bienvenido/a a tu programa!</h1>
     <p>Tu inscripción ha sido confirmada. Las clases comienzan el <strong>[FECHA]</strong>.</p>
   </header>
 
-  <section>
-    <h2>Tu programa en resumen</h2>
-    <ul>
-      <li><strong>Nombre del programa:</strong> [Nombre del Programa]</li>
-      <li><strong>Modalidad:</strong> En línea</li>
-      <li><strong>Duración:</strong> [Duración]</li>
-      <li><strong>Materias clave:</strong> [Lista de materias]</li>
-      <li><a href="#">Ver plan de estudios completo</a></li>
-    </ul>
-  </section>
+  <div class="video-container">
+    <h2>Video de Bienvenida</h2>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
 
-  <section>
-    <h2>Fechas clave</h2>
-    <ul>
-      <li>Inicio de clases: [FECHA]</li>
-      <li>Orientación: [FECHA]</li>
-      <li>Recepción de accesos: [FECHA]</li>
-      <li>Duración estimada semanal: [X] horas</li>
-    </ul>
-  </section>
+  <div class="container">
+    <div class="column">
+      <h2>Tu programa en resumen</h2>
+      <ul>
+        <li><strong>Nombre del programa:</strong> [Nombre del Programa]</li>
+        <li><strong>Modalidad:</strong> En línea</li>
+        <li><strong>Duración:</strong> [Duración]</li>
+        <li><strong>Materias clave:</strong> [Lista de materias]</li>
+        <li><a href="#">Ver plan de estudios completo</a></li>
+      </ul>
 
-  <section>
-    <h2>Acceso a la plataforma</h2>
-    <p>Recibirás tus credenciales por correo antes del <strong>[FECHA]</strong>. Usarás la plataforma <strong>[Nombre]</strong>.</p>
-    <p><a href="#">Ir a la plataforma</a> (cuando esté disponible).</p>
-  </section>
+      <h2>Fechas clave 📅</h2>
+      <ul>
+        <li>📌 Inicio de clases: [FECHA]</li>
+        <li>🧭 Orientación: [FECHA]</li>
+        <li>📧 Recepción de accesos: [FECHA]</li>
+        <li>⏰ Duración estimada semanal: [X] horas</li>
+      </ul>
 
-  <section>
-    <h2>Antes de comenzar</h2>
-    <ul>
-      <li>Verifica tu conexión a internet</li>
-      <li>Descarga la app si aplica</li>
-      <li>Reserva un horario de estudio semanal</li>
-      <li>Prepara tu espacio de trabajo</li>
-      <li>Revisa el video de bienvenida (opcional)</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Preguntas frecuentes</h2>
-    <div class="faq">
-      <details>
-        <summary>¿Cuándo recibiré mis accesos?</summary>
-        <p>Entre 3 a 5 días antes del inicio de clases, vía correo electrónico.</p>
-      </details>
-      <details>
-        <summary>¿Qué hago si tengo problemas técnicos?</summary>
-        <p>Contáctanos por el chat en vivo o escríbenos a soporte@ejemplo.com.</p>
-      </details>
-      <details>
-        <summary>¿Puedo diferir mi inicio?</summary>
-        <p>En algunos casos sí. Escríbenos para ayudarte.</p>
-      </details>
+      <h2>Antes de comenzar 🛠️</h2>
+      <ul>
+        <li>💻 Verifica tu conexión a internet</li>
+        <li>📲 Descarga la app si aplica</li>
+        <li>🗓️ Reserva un horario de estudio semanal</li>
+        <li>📚 Prepara tu espacio de trabajo</li>
+        <li>🎥 Revisa el video de bienvenida</li>
+      </ul>
     </div>
-  </section>
 
-  <section>
-    <h2>¿Necesitas ayuda?</h2>
-    <p>Estamos para apoyarte. Puedes contactarnos por los siguientes medios:</p>
-    <p><a class="contact-button" href="https://wa.me/tu_numero">Chatear con un asesor</a></p>
-    <p>Correo: <a href="mailto:soporte@ejemplo.com">soporte@ejemplo.com</a></p>
-    <p>Horario de atención: Lunes a viernes de 9:00 a 18:00 hrs</p>
-  </section>
+    <div class="column">
+      <h2>Acceso a la plataforma 🔐</h2>
+      <p>Recibirás tus credenciales por correo antes del <strong>[FECHA]</strong>. Usarás la plataforma <strong>[Nombre]</strong>.</p>
+      <p><a href="#">Ir a la plataforma</a> (cuando esté disponible).</p>
+
+      <h2>Preguntas frecuentes ❓</h2>
+      <div class="faq">
+        <details>
+          <summary>¿Cuándo recibiré mis accesos?</summary>
+          <p>Entre 3 a 5 días antes del inicio de clases, vía correo electrónico.</p>
+        </details>
+        <details>
+          <summary>¿Qué hago si tengo problemas técnicos?</summary>
+          <p>Contáctanos por el chat en vivo o escríbenos a soporte@ejemplo.com.</p>
+        </details>
+        <details>
+          <summary>¿Puedo diferir mi inicio?</summary>
+          <p>En algunos casos sí. Escríbenos para ayudarte.</p>
+        </details>
+      </div>
+
+      <h2>¿Necesitas ayuda? 💬</h2>
+      <p>Estamos para apoyarte. Puedes contactarnos por los siguientes medios:</p>
+      <p><a class="contact-button" href="https://wa.me/tu_numero">Chatear con un asesor</a></p>
+      <p>Correo: <a href="mailto:soporte@ejemplo.com">soporte@ejemplo.com</a></p>
+      <p>Horario de atención: Lunes a viernes de 9:00 a 18:00 hrs</p>
+    </div>
+  </div>
 </body>
 </html>
+
